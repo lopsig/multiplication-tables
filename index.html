@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="multiplication.css">
+  
 </head>
 
 <body>
@@ -45,7 +46,7 @@
         </div>
       </div>
 
-      <button class="btn-probar">
+      <button class="btn-probar" onclick="createTable()">
         <span class="btn-dot"></span>
         PROBAR
       </button>
@@ -87,7 +88,7 @@
         <span>RESULTADO</span>
       </div>
 
-      <div class="tabla">
+      <div class="tabla" id="table">
         <div class="fila" style="--delay:0.10s">
           <span class="operacion"><span class="num-azul">3</span> × <span class="num-plomo">1</span></span>
           <span class="signo">=</span>
@@ -162,6 +163,8 @@
     </footer>
 
   </div>
+
+  <script src="multiplication.js"></script>
 
 </body>
 
