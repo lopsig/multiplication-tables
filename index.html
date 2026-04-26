@@ -48,18 +48,30 @@
 
       <button class="btn-probar" onclick="createTable()">
         <span class="btn-dot"></span>
-        PROBAR
+        CALCULAR
       </button>
     </header>
 
     <!-- HERO -->
     <div class="hero">
-      <div class="hero-badge">
-        <span class="badge-punto"></span>
-        Módulo Activo
-      </div>
-      <h1 class="hero-titulo">Tabla del <span class="hero-num">3</span></h1>
-      <p class="hero-desc">Visualización interactiva de multiplicaciones</p>
+        <div class="instruccion">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="7" stroke="#3b82f6" stroke-width="1.5" />
+            <path d="M8 7v5M8 5v1" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <span>
+            Ingresa un número y presiona <strong>ENTER</strong> o da click en <strong> CALCULAR</strong> para generar su tabla de multiplicar
+          </span>
+        </div>
+        
+        <div class="input-wrap">
+          <span class="input-label">NÚMERO</span>
+          <input type="number" id="txtInput" placeholder="Ej: 7" min="1" max="999" onkeydown="if(event.key=='Enter') createTable()">
+          <span class="input-suffix">×</span>
+        </div>
+        
+        <h1 class="hero-titulo">Tabla del <span class="hero-num" id="inputFactor"">3</span></h1>
+        <p class="hero-desc">Visualización interactiva de multiplicaciones</p>
 
       <!-- Stats row -->
       <div class="stats">
@@ -69,12 +81,12 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-valor">×3</span>
+          <span class="stat-valor" id="factor">×3</span>
           <span class="stat-label">Factor</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-valor">30</span>
+          <span class="stat-valor" id="maxValue">30</span>
           <span class="stat-label">Máximo</span>
         </div>
       </div>
